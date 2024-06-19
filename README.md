@@ -51,7 +51,7 @@ pip install --upgrade numpy nltk
 # Install requirements
 
 pip install "zenml==0.58.2"
-zenml connect --url https://1b4cb813-zenml.cloudinfra.zenml.io
+zenml connect --url <URL>
 pip install -r requirements.txt
 
 # Run the feature engineering pipeline
