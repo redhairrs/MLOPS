@@ -20,44 +20,39 @@ Along the way we will also show you how to:
 - Automatically version, track, and cache data, models, and other artifacts.
 - Transition your ML models from development to production.
 
-## 🏃 Run on Colab
+## Prerequisites
 
-You can use Google Colab to see ZenML in action, no signup / installation required!
-
-<a href="https://colab.research.google.com/github/zenml-io/zenml/blob/main/examples/quickstart/quickstart.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+- Python (version 3.8 to 3.11 recommended, tested with 3.9)
+- pip (latest version recommended)
 
 ## :computer: Run Locally
 
 To run locally, install ZenML and pull this quickstart:
 
-```shell
-# Install ZenML
-pip install "zenml[server]"
+### 1. Install Python
 
-# clone the ZenML repository
-git clone https://github.com/zenml-io/zenml.git
-cd zenml/examples/quickstart
+Download and install Python from [python.org](https://www.python.org/downloads/). Ensure the version is between 3.8 and 3.11. This project uses Python 3.9.
+
+### 2. Update System Environment Variables
+
+After installing Python, add it to your system and user PATH to ensure it is accessible from the command line.
+
+### 3. Update Libraries
+
+Upgrade numpy and nltk to the latest versions using pip:
+
+```bash
+pip install --upgrade numpy nltk
+
 ```
 
-Now we're ready to start. You have two options for running the quickstart locally:
-
-#### Option 1 - Interactively explore the quickstart using Jupyter Notebook:
+### - Execute the whole ML pipeline from a Python script:
 ```bash
-pip install notebook
-jupyter notebook
-# open notebooks/quickstart.ipynb
-```
+# Install requirements
 
-#### Option 2 - Execute the whole ML pipeline from a Python script:
-```bash
-# Install required zenml integrations
-zenml integration install sklearn -y
-
-# Initialize ZenML
-zenml init
-
-# Start the ZenServer to enable dashboard access
-zenml up
+pip install "zenml==0.58.2"
+zenml connect --url https://1b4cb813-zenml.cloudinfra.zenml.io
+pip install -r requirements.txt
 
 # Run the feature engineering pipeline
 python run.py --feature-pipeline
