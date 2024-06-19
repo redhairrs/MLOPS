@@ -14,12 +14,6 @@ This is a representation of how it will all come together:
 
 <img src=".assets/pipeline_overview.png" width="70%" alt="Pipelines Overview">
 
-Along the way we will also show you how to:
-
-- Structure your code into MLOps pipelines.
-- Automatically version, track, and cache data, models, and other artifacts.
-- Transition your ML models from development to production.
-
 ## Prerequisites
 
 - Python (version 3.8 to 3.11 recommended, tested with 3.9)
